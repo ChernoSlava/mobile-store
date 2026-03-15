@@ -1,0 +1,20 @@
+[
+  {
+    "imei": "131444441111",
+    "brand": "Apple",
+    "model": "iPhone 17 Pro Max",
+    "price": 31000
+  },
+  {
+    "imei": "123123131511",
+    "brand": "Apple",
+    "model": "iPhone 17 Pro",
+    "price": 27300
+  },
+  {
+    "imei": "131313123112312",
+    "brand": "Samsung",
+    "model": "A320px",
+    "price": 17000
+  }
+]

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>iPhone Manager 2026</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="ios-header">
+        <div class="header-left">
+            <select id="theme-select" class="header-select" onchange="window.handleThemeChange()">
+                <option value="auto">🌓 Авто</option>
+                <option value="day">☀️ День</option>
+                <option value="night">🌙 Ночь</option>
+            </select>
+        </div>
+        <h1>Телефоны</h1>
+        <div class="header-right">
+            <select id="currency-select" class="header-select" onchange="window.updateCurrency()">
+                <option value="EUR">EUR</option>
+                <option value="USD">USD</option>
+                <option value="RON">RON</option>
+            </select>
+            <button class="add-btn-ios" onclick="window.handleAddPhone()">Добавить</button>
+        </div>
+    </header>
+
+    <main class="ios-content">
+        <section class="ios-section">
+            <h2 class="section-title">Данные телефона</h2>
+            <div class="input-group">
+                <input type="text" id="imei" placeholder="IMEI">
+                <input type="text" id="brand" placeholder="Бренд">
+                <input type="text" id="model" placeholder="Модель">
+                <input type="number" id="price" placeholder="Цена (MDL)">
+            </div>
+            
+        <div id="stats-bar" class="ios-stats">
+            <span>Всего: <b id="total-count">0</b></span>
+            <button class="sort-btn" onclick="window.toggleSort()">Цена <span id="sort-icon">↕️</span></button>
+            <span>Сумма: <b id="total-sum">0</b> MDL</span>
+        </div>
+
+        <div class="filter-group">
+            <select id="brand-filter-select" class="ios-select-inline" onchange="window.renderList()">
+                <option value="all">Все бренды</option>
+            </select>
+        </div>
+
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Поиск по названию или IMEI..." oninput="window.renderList()">
+        </div>
+
+        <section class="ios-section">
+            <h2 class="section-title">Список объектов</h2>
+            <div id="phone-list"></div>
+        </section>
+    </main>
+
+    <div id="undo-toast" class="ios-toast">
+        Объект удален. <button onclick="window.undoDelete()">Отменить</button>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>
