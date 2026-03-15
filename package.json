@@ -1,6 +1,8 @@
 {
-  "name": "my-electron-app",
+  "name": "mobile-store",
   "version": "1.0.0",
+  "author": "ChernoSlava", 
+  "description": "My awesome mobile store desktop application",
   "main": "main.js",
   "scripts": {
     "start": "electron-forge start",
@@ -20,11 +22,13 @@
         "asar": true
       },
       "rebuildConfig": {},
-"makers": [
+      "makers": [
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "my_electron_app"
+            "name": "mobile_store",
+            "authors": "ChernoSlava",
+            "description": "Mobile Store desktop app"
           }
         },
         {
